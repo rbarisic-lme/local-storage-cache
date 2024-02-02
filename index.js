@@ -23,4 +23,4 @@ const getCachedData = (storageKey) => {
   return data;
 };
 
-export default { cacheData, getCachedData };
+export { cacheData, getCachedData };
