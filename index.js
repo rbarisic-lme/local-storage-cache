@@ -1,15 +1,11 @@
 "use strict";
 
 const cacheData = (storageKey, data, ttlInMilliseconds) => {
-  const now = new Date();
+  const expires = new Date().getTime() + ttlInMilliseconds;
+  localStorage.setItem(storageKey, JSON.stringify({ data, expires }));
+};
 
-  localStorage.setItem(storageKey, JSON.stringify({
-    data: data,
-    expires: now.getTime() + ttlInMilliseconds,
-  }));
-}
-
-const getCachedData = storageKey =>  {
+const getCachedData = storageKey => {
   const objectData = localStorage.getItem(storageKey);
 
   if (!objectData) {
@@ -25,4 +21,6 @@ const getCachedData = storageKey =>  {
   }
 
   return data;
-}
+};
+
+export { cacheData, getCachedData };

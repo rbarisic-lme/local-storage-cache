@@ -10,3 +10,7 @@ cacheData('your-key', dataYouWantToStore, expireInMilliseconds);
 // To get data
 getCachedData('your-key');
 ```
+
+---
+
+Original by Tomas Sjösten, forked by me (rbarisic) to include typing and module exports
