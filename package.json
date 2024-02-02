@@ -1,6 +1,6 @@
 {
   "name": "@rbarisic/local-storage-cache",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Leverage local storage to improve perfomance by caching data and expire cache [typescript fork]",
   "main": "index.js",
   "types": "index.d.ts",
