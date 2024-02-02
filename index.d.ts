@@ -1,5 +1,4 @@
-// local-storage-cache.d.ts
-declare module "local-storage-cache" {
+declare module "@rbarisic/local-storage-cache" {
   type CacheDataFunction = (
     storageKey: string,
     data: any,

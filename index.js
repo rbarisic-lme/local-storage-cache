@@ -5,7 +5,7 @@ const cacheData = (storageKey, data, ttlInMilliseconds) => {
   localStorage.setItem(storageKey, JSON.stringify({ data, expires }));
 };
 
-const getCachedData = storageKey => {
+const getCachedData = (storageKey) => {
   const objectData = localStorage.getItem(storageKey);
 
   if (!objectData) {
@@ -23,4 +23,4 @@ const getCachedData = storageKey => {
   return data;
 };
 
-export { cacheData, getCachedData };
+export default { cacheData, getCachedData };
